@@ -12,7 +12,7 @@ public struct Triangle {
     let b: CGPoint
     let c: CGPoint
 
-    func contains (point: CGPoint) -> Bool {
+    public func contains (point: CGPoint) -> Bool {
         let v0 = self.c - self.a
         let v1 = self.b - self.a
         let v2 = point - self.a

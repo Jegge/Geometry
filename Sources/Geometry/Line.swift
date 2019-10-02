@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Line {
-    init (from a: CGPoint, to b: CGPoint, isInfinite: Bool = true) {
+    public init (from a: CGPoint, to b: CGPoint, isInfinite: Bool = true) {
         self.a = a
         self.b = b
         self.isInfinite = isInfinite
@@ -18,15 +18,15 @@ public struct Line {
     let b: CGPoint
     let isInfinite: Bool
 
-    func distance (to point: CGPoint) -> (distance: CGFloat, hitPoint: CGPoint)? {
+    public func distance (to point: CGPoint) -> (distance: CGFloat, hitPoint: CGPoint)? {
         return Geometry.distance(from: point, to: self)
     }
 
-    func intersects (point: CGPoint) -> Bool {
+    public func intersects (point: CGPoint) -> Bool {
         return Geometry.intersects(point: point, with: self)
     }
 
-    func intersects (line: Line) -> CGPoint? {
+    public func intersects (line: Line) -> CGPoint? {
 
         if self.a.x == self.b.x {
             if line.a.x == line.b.x {

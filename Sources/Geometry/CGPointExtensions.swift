@@ -69,7 +69,7 @@ public extension CGPoint {
     }
 }
 
-func abs (point: CGPoint) -> CGPoint {
+public func abs (point: CGPoint) -> CGPoint {
     return CGPoint(x: abs(point.x), y: abs(point.y))
 }
 
