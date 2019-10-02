@@ -21,9 +21,9 @@ public struct Line {
         self.isInfinite = isInfinite
     }
 
-    let a: CGPoint
-    let b: CGPoint
-    let isInfinite: Bool
+    public let a: CGPoint
+    public let b: CGPoint
+    public let isInfinite: Bool
 
     public func distance (to point: CGPoint) -> (distance: CGFloat, hitPoint: CGPoint)? {
         return Geometry.distance(from: point, to: self)

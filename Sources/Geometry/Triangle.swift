@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Triangle {
-    let a: CGPoint
-    let b: CGPoint
-    let c: CGPoint
+    public let a: CGPoint
+    public let b: CGPoint
+    public let c: CGPoint
 
     public func contains (point: CGPoint) -> Bool {
         let v0 = self.c - self.a
