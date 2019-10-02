@@ -8,6 +8,13 @@
 import Foundation
 
 public struct Line {
+        
+    public init (x1: CGFloat, y1: CGFloat, x2: CGFloat, y2: CGFloat, isInfinite: Bool = true) {
+        self.a = CGPoint(x: x1, y: y1)
+        self.b = CGPoint(x: x2, y: y2)
+        self.isInfinite = isInfinite
+    }
+    
     public init (from a: CGPoint, to b: CGPoint, isInfinite: Bool = true) {
         self.a = a
         self.b = b
